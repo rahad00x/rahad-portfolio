@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { background: #070707; color: #f4f4f4; -webkit-font-smoothing: antialiased; }
+::selection { background: #f4f4f4; color: #070707; }
+:focus-visible { outline: 2px solid #f4f4f4; outline-offset: 3px; border-radius: 6px; }
+
+.float { animation: float 10s ease-in-out infinite; }
+@keyframes float { 50% { transform: translateY(-10px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
